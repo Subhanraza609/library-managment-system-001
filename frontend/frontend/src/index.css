@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-200;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  /* Editorial serif headings (Newsreader) for a refined, library feel. */
+  h1,
+  h2,
+  h3 {
+    @apply font-serif tracking-tight text-slate-900 dark:text-slate-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-card dark:border-slate-800 dark:bg-slate-900;
+  }
+}
+
+::selection {
+  @apply bg-brand-600/20 text-brand-900 dark:text-brand-100;
+}
+
+/* Subtle custom scrollbar on pointer devices. */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300 dark:bg-slate-700;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
+  }
+}
