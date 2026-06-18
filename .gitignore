@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+instance/
+*.sqlite
+*.sqlite3
+backend/uploads/
+
+# Node
+node_modules/
+dist/
+.vite/
+build/
+coverage/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Test / tooling artifacts
+.playwright-mcp/
+.claude/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
